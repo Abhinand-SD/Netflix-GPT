@@ -9,8 +9,16 @@
 - Form Validation
 - useRef Hook
 - Firebase setup
-- Diploying our application
-- Authentication
+- Diploying our app to product
+- Create SignUp User Account
+- Implement Sign In user Api
+- Create Reduc Store with userSlice
+- Implemented Sign out
+- Update Profile
+- BugFix: Sign UP user displayName and profile picture update
+- BugFix: if the user is not logged in Redirect /browse to login page and vice-versa
+- Unsubscribed to the onAuthStateChanged callback
+- Add hardcoded values to the constants file
 # Features
 
 - Login/Signup
