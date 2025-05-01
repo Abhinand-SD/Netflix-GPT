@@ -50,19 +50,19 @@ const Header = () => {
 
 
   return (
-    <div className='absolute flex justify-between items-center w-screen h-16  px-10 z-10'>
+    <div className='relative flex justify-between items-center w-screen h-16 px-10 z-10'>
       <div>
         <img width="170" height="170" src={LOGO_URL} alt="netflix" className='object-contain' />
       </div>
 
       {
         UserData && (
-          <div className='flex items-center  space-x-4'>
+          <div className='flex items-center space-x-4'>
             <div>
-              <img src={UserData?.photoURL} alt='Avatar' className='w-10 rounded-full m-auto'></img>
+              <img src={UserData?.photoURL} alt='Avatar' className='w-10 rounded-full'></img>
             </div>
 
-            <p className='text-black'>{UserData?.displayName}</p>
+            <p className='text-black flex '>{UserData?.displayName}</p>
 
             <button onClick={signOutHandle} className='text-white bg-red-700 px-4 py-2 rounded-lg'>SignOut</button>
           </div>

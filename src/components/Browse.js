@@ -1,24 +1,21 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Header from './Header'
-import { API_OPTIONS } from '../utils/constant';
+import useNowPlayingMovies from '../hooks/useNowPlayingMovies'
+import MainContainer from './MainContainer'
+import SecondaryContainer from './SecondoryContainer'
 
 const Browse = () => {
 
-  const nowPlayingMovies = async() => {
-    const data = await fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1', API_OPTIONS)
-    const json = data.json();
-    console.log(json.Oblect.results)
-  }
-
-  useEffect(() => {
-    nowPlayingMovies()
-
-  })
+  useNowPlayingMovies()
   
   return (
-    <div className='bg-yellow-400'>
+    <div>
     <div>
       <Header />
+      {/* Main container */}
+       <MainContainer />
+      {/* secondary container*/}
+      <SecondaryContainer />
     </div>
     </div>
   )
