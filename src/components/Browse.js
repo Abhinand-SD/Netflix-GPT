@@ -15,7 +15,7 @@ const Browse = () => {
       {/* Main container */}
        <MainContainer />
       {/* secondary container*/}
-      <SecondaryContainer />
+      {/* <SecondaryContainer /> */}
     </div>
     </div>
   )

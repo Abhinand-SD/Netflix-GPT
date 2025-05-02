@@ -1,7 +1,7 @@
 const SecondaryContainer = () => {
     return(
         <div>
-            Secondory
+            
         </div>
     )
 }

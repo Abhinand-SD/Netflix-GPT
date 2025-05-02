@@ -50,7 +50,7 @@ const Header = () => {
 
 
   return (
-    <div className='relative flex justify-between items-center w-screen h-16 px-10 z-10'>
+    <div className='absolute flex justify-between items-center w-screen h-16 px-10 z-10'>
       <div>
         <img width="170" height="170" src={LOGO_URL} alt="netflix" className='object-contain' />
       </div>
@@ -62,9 +62,9 @@ const Header = () => {
               <img src={UserData?.photoURL} alt='Avatar' className='w-10 rounded-full'></img>
             </div>
 
-            <p className='text-black flex '>{UserData?.displayName}</p>
+            {/* <p className='text-white flex '>{UserData?.displayName}</p> */}
 
-            <button onClick={signOutHandle} className='text-white bg-red-700 px-4 py-2 rounded-lg'>SignOut</button>
+            <button onClick={signOutHandle} className='text-white bg-red-700 px-2 py-1 rounded-lg'>SignOut</button>
           </div>
         )
       }

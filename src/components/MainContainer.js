@@ -14,7 +14,7 @@ const MainContainer = () => {
 
   return (
     <div>
-      <div className=' relative h-[1000px] bg-slate-700'>
+      <div className=' relative  bg-slate-700'>
       {/* video Title*/}
       <VideoTitle title = {original_title} description ={overview}/>
       {/* Video Backgground*/}
