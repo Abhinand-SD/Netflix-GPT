@@ -47,10 +47,8 @@ const Header = () => {
 
   }, [dispatch, navigate])
 
-
-
   return (
-    <div className='absolute flex justify-between items-center w-screen h-16 px-10 z-10'>
+    <div className='absolute flex justify-between items-center w-full h-16 px-10 z-10'>
       <div>
         <img width="170" height="170" src={LOGO_URL} alt="netflix" className='object-contain' />
       </div>

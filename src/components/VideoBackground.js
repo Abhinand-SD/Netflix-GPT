@@ -7,16 +7,18 @@ const VideoBackground = ({ movieId }) => {
   const trailer = useSelector(store => store.movies.trailerVideo)
   useMovieTrailerVideo(movieId)
 
-  console.log(" trailer key", trailer)
 
   return (
-    <div className='bg-black'>
+    trailer && (<div className='bg-black h-screen'>
       <div className=' relative w-screen h-screen overflow-hidden opacity-50'>
-        <iframe className='absolute top-0 left-0 w-full h-full object-cover pointer-events-none scale-125 scale-y-150' src={`https://www.youtube.com/embed/kQF1gl7nLaU?si=${trailer?.key}?&autoplay=1&mute=1&controls=0`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe className='absolute top-0 left-0 w-full h-full object-cover pointer-events-none scale-125 scale-y-150' src={`https://www.youtube.com/embed/${trailer.key}?&autoplay=1&mute=1&controls=0`}></iframe>
       </div>
-    </div>
+    </div>)
 
   )
 }
 
-export default VideoBackground
+
+
+
+export default VideoBackground;
