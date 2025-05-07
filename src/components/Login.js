@@ -87,7 +87,7 @@ const Login = () => {
     
     <div className='relative w-full min-h-screen bg-black text-white overflow-hidden'>
     <Header /> 
-      <div className='absolute w-full h-full  opacity-30'>
+      <div className='absolute w-full h-full opacity-30'>
         <img src={BG_IMAGE} alt='netflix' className='absolute top-0 left-0 w-full h-full object-cover scale-125' />
       </div>
 

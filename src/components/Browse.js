@@ -7,22 +7,32 @@ import usePopularMovies from '../hooks/usePopularMovies'
 import useDiscoverMovies from '../hooks/useDiscoverMovies'
 import useTopRatedMovies from '../hooks/useTopRatedMovies'
 import useUpcomingMovies from '../hooks/useUpcomingMovies'
+import { useSelector } from 'react-redux'
+import GptSearch from './GptSearch'
 
 const Browse = () => {
+
+  const gptSearch = useSelector(store => store.gpt.showGptSearch)
 
   useNowPlayingMovies()
   useDiscoverMovies()
   usePopularMovies()
   useTopRatedMovies()
   useUpcomingMovies()
-  
+
   return (
     <div className='overflow-hidden'>
+
       <Header />
-      {/* Main container */}
-       <MainContainer />
-      {/* secondary container*/}
-      <SecondaryContainer />
+      {gptSearch ? (<GptSearch />
+      ) : (
+        <>
+          {/* Main container */}
+          <MainContainer />
+          {/* secondary container*/}
+          <SecondaryContainer />
+        </>)}
+
     </div>
   )
 }
