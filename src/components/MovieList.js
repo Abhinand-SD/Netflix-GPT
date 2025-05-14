@@ -1,7 +1,7 @@
 import React from 'react'
 import MovieCards from './MovieCards'
 
-const MovieList = ({ moviesData, title }) => {
+const MovieList = ({  title, moviesData }) => {
     return (
         <div className='relative px-12 py-2'>
             <p className='text-white text-md'>{title}</p>

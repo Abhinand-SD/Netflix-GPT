@@ -54,7 +54,7 @@ const Header = () => {
 
   }, [dispatch, navigate])
 
-  const languageHandle = (e) =>{
+  const languageHandle = (e) => {
     dispatch(addLanguage(e.target.value))
   }
 
@@ -67,18 +67,19 @@ const Header = () => {
       {
         UserData && (
           <div className='flex items-center space-x-4'>
-          {gptSearch && (<select onChange={languageHandle} className=' rounded-lg bg-transparent text-white focus:ring-0 border-none outline-none' >
-            {SUPO_LANGU.map(item => <option key={item.indentifier} value={item.indentifier} className='p-5 bg-black text-red' >{item.name}</option>)}
-            
-          </select>)}
-          <button onClick={gptSearchHandle} className='text-white font-medium '>{gptSearch ? "Home" : "GPT Search"}</button>
-            <div>
-              <img src={UserData?.photoURL} alt='Avatar' className='w-10 rounded-full'></img>
+
+            <button onClick={gptSearchHandle} className='text-white text-lg font-medium hover:text-slate-200'>{gptSearch ? "Home" : "GPT search"}</button>
+
+            {gptSearch && (<select onChange={languageHandle} className=' rounded-lg bg-transparent text-white text-lg font-medium focus:ring-0 border-none outline-none hover:text-slate-200' >
+              {SUPO_LANGU.map(item => <option key={item.indentifier} value={item.indentifier} className='p-5 bg-black ' >{item.name}</option>)}
+            </select>)}
+
+            <div className='flex gap-2'>
+              <img src={UserData?.photoURL} alt='Avatar' className='w-7'></img>
+              <button onClick={signOutHandle} className='text-white text-lg rounded-lg hover:text-slate-200'>signOut</button>
             </div>
 
-            {/* <p className='text-white flex '>{UserData?.displayName}</p> */}
-
-            <button onClick={signOutHandle} className='text-white rounded-lg'>signOut</button>
+            {/* <p className='text-white flex '>{UserData?.displayName}</p> */}   
           </div>
         )
       }

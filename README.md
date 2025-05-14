@@ -38,7 +38,7 @@
 - GPT search Bar
 - Multi-language feature
 - GPT API's
- 
+
 # Features
 
 - Login/Signup
@@ -53,4 +53,4 @@
            -Movie List * N
 - NetflixGPT
     - Search Bar
-    - Movie Suggesions        
+    - Movie Suggesions
